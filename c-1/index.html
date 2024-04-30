@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>해운대 빛축제</title>
+    <link rel="stylesheet" href="./main.css">
+    <script src="./js/jquery-1.12.3.js"></script>
+    <script src=""></script>
+</head>
+
+<body>
+    <div class="warp">
+
+        <div class="header">
+            <div class="h_logo">
+                <a href="#"><img src="./C-1_수험자제공파일/Header/logo.png" alt=""></a>
+            </div>
+            <div class="gnb_con">            
+                <ul class="gnb">
+                    <li>
+                        <a href="#">이용안내</a>
+                        <ul class="sub">
+                            <li><a href="#">이용방법</a></li>
+                            <li><a href="#">이용시간</a></li>
+                            <li><a href="#">이용요금</a></li>
+                        </ul>                    
+                    </li>
+                    <li>
+                        <a href="#">이벤트정보</a>
+                        <ul class="sub">
+                            <li><a href="#">현장이벤트</a></li>
+                            <li><a href="#">온라인이벤트</a></li>
+                            <li><a href="#">이벤트예약</a></li>
+                        </ul>                    
+                    </li>
+                    <li>
+                        <a href="#">프로그램</a>
+                        <ul class="sub">
+                            <li><a href="#">프로그램안내</a></li>
+                            <li><a href="#">온라인예약</a></li>
+                            <li><a href="#">단체예약상담</a></li>
+                        </ul>                    
+                    </li>
+                    <li>
+                        <a href="#">고객센터</a>
+                        <ul class="sub">
+                            <li><a href="#">공지사항</a></li>
+                            <li><a href="#">자주묻는질문</a></li>
+                            <li><a href="#">자료실</a></li>
+                        </ul>                    
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="main">
+            
+            <div class="slide">
+
+                    <div class="s_slide">
+                        <img src="./C-1_수험자제공파일/[Slide]/img1.jpg" alt="">
+                        <h2>해운대빛축제1</h2>
+                    </div>
+                    <div class="s_slide">
+                        <img src="./C-1_수험자제공파일/[Slide]/img2.jpg" alt="">
+                        <h2>해운대빛축제2</h2>
+                    </div>
+                    <div class="s_slide">
+                        <img src="./C-1_수험자제공파일/[Slide]/img3.jpg" alt="">
+                        <h2>해운대빛축제3</h2>
+                    </div>
+
+            </div>
+            
+            <div class="contents">
+                <div class="tab">
+                    <div class="t_title">
+                        <h3 class="active">공지사항</h3>
+                        <h3>갤러리</h3>
+                    </div>
+                    <div class="t_con">
+                        <ul class="text">
+                            <li>
+                                <a href="#">해변에서 펼쳐지는 노래공연</a>
+                                <span>2020.11.09</span>
+                            </li>
+                            <li>
+                                <a href="#">바다의 야경과 빛공연 관람하기</a>
+                                <span>2020.11.09</span>
+                            </li>
+                            <li>
+                                <a href="#">불꽃놀이 이벤트를 신청하세요</a>
+                                <span>2020.11.09</span>
+                            </li>
+                            <li>
+                                <a href="#">빛축제 단체관람 안내</a>
+                                <span>2020.11.09</span>
+                            </li>
+                        </ul>
+                        <ul class="gallery">
+                            <li>
+                                <a href="#"><img src="./C-1_수험자제공파일/Contents/gallery 이미지/icon1.jpg" alt=""></a>
+                            </li>
+                            <li>
+                                <a href="#"><img src="./C-1_수험자제공파일/Contents/gallery 이미지/icon2.jpg" alt=""></a>
+                            </li>
+                            <li>
+                                <a href="#"><img src="./C-1_수험자제공파일/Contents/gallery 이미지/icon3.jpg" alt=""></a>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+                <div class="banner">
+                    <img src="./C-1_수험자제공파일/Contents/배너 이미지/banner.jpg" alt="">                    
+                </div>
+                <div class="link">
+                    <a href="#"><img src="./C-1_수험자제공파일/Contents/바로가기 이미지/direct.jpg" alt=""></a>
+                </div>
+            </div>
+            
+            <div class="footer">
+                <div class="f_logo">
+                    <img src="./C-1_수험자제공파일/Footer/footerLogo.png" alt="">
+                </div>
+                <div class="f_con">
+                    <ul class="f_menu">
+                        <li><a href="#">하단메뉴1</a></li>
+                        <li><a href="#">하단메뉴2</a></li>
+                        <li><a href="#">하단메뉴3</a></li>
+                    </ul>
+                   <p>COPYRIGHTⓒ by WEBDESIGN. ALL RIGHTS RESERVED</p>
+                </div>
+            </div>
+            
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>    
+
+
+    <script>
+        $(function(){
+
+            // 메뉴
+            $(".gnb li").hover(
+                function(){
+                    $(this).find(".sub").stop().slideDown()
+                },
+                function(){
+                    $(this).find(".sub").stop().slideUp()
+                }
+            )
+
+                // 슬라이드          
+                var index = 0
+                $(".s_slide").eq(index).show()
+
+
+                setInterval(function(){
+                    var nextindex = (index + 1) % 3
+
+                    $(".s_slide").eq(index).fadeOut()
+                    $(".s_slide").eq(nextindex).fadeIn()
+                    index = nextindex
+                }, 3000)
+              
+
+                // tab
+                $(".t_title h3").click(function(){
+                    $(".t_title h3").removeClass("active")
+                    $(this).addClass("active")
+
+                    var idx = $(this).index()
+
+                    $(".t_con ul").hide()
+                    $(".t_con ul").eq(idx).show()
+                })
+
+
+
+
+
+
+
+
+        })
+    </script>
+
+
+
+
+</body>
+</html>

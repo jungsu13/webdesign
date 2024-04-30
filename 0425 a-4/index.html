@@ -15,7 +15,7 @@
             <div class="h_logo">
                 <a href="#"><img src="./A-4_수험자제공파일/Header/logo.png" alt="로고임"></a>
             </div>
-            <ui class="h_menu">
+            <ul class="h_menu">
                 <li>
                     <a href="#">회사소개</a>
                     <ul class="sub">
@@ -48,7 +48,7 @@
                         <li><a href="#">홍보자료실</a></li>
                     </ul>
                 </li>
-            </ui>          
+            </ul>          
             
         </div>
         
@@ -71,11 +71,11 @@
         
         <div class="contens">
             <div class="tab">
-                <div class="c_title">
+                <div class="t_title">
                     <h3>공지사항</h3>
                 </div>
-                <ul class="c_text">
-                    <li>
+                <ul class="t_contents">
+                    <li class="t_c_f">
                         <a href="#">상반기 신입/경력 사원 채용 공고</a><span>2020.11.20</span>
                     </li>
                     <li>
@@ -89,15 +89,13 @@
                     </li>
                 </ul>
             </div>
-            <div class="gallery">
-                <ul>
-                    <li><img src="./A-4_수험자제공파일/Contents/gallery 이미지/icon1.jpg" alt="갤러리 이미지"></li>
-                    <li><img src="./A-4_수험자제공파일/Contents/gallery 이미지/icon2.jpg" alt="갤러리 이미지"></li>
-                    <li><img src="./A-4_수험자제공파일/Contents/gallery 이미지/icon3.jpg" alt="갤러리 이미지"></li>
-                </ul>
-            </div>
+            <ul class="gallery">                
+                <li><img src="./A-4_수험자제공파일/Contents/gallery 이미지/icon1.jpg" alt="갤러리 이미지"></li>
+                <li><img src="./A-4_수험자제공파일/Contents/gallery 이미지/icon2.jpg" alt="갤러리 이미지"></li>
+                <li><img src="./A-4_수험자제공파일/Contents/gallery 이미지/icon3.jpg" alt="갤러리 이미지"></li>
+            </ul>
             <div class="direct">
-                <a href="./A-4_수험자제공파일/Contents/바로가기 이미지/direct.jpg"></a>
+                <a href="#"><img src="./A-4_수험자제공파일/Contents/바로가기 이미지/direct.jpg" alt="바로가기 이미지"></a>
             </div>
         </div>
         
@@ -112,21 +110,48 @@
                     <p>COPYRIGHTⓒ by WEBDESIGN. ALL RIGHTS RESERVED</p>
                 </div>
             </div>
-            <ul class="site">
-                <li><a href="">패밀리사이트1</a></li>
-                <li><a href="">패밀리사이트2</a></li>
-                <li><a href="">패밀리사이트3</a></li>
-            </ul>
+               <ul class="site">
+                   <li><a href="">패밀리사이트1</a></li>
+                   <li><a href="">패밀리사이트2</a></li>
+                   <li><a href="">패밀리사이트3</a></li>
+               </ul>
         </div>
 
         <div class="popup">
-            <h3>레이어 팝업창 제목 및 내용</h3>
+            <div class="p_t">
+                <h3 class="p_tt">상반기 신입/경력 사원 채용 공고</h3>
+            </div>
             <p>국내 최고의 건설회사로 발돋움하고 있는 유진건설에서는 
                 열정을 가지고 진취적으로 도전하는 신입/경력 사원을 모집합니다.
                 남율건설과 함께 하실 역량있는 인재들의 많은 지원을 기다립니다.</p>
-            <button>닫기</button>    
+            <button>*닫기</button>    
         </div>
         
     </div>
 </body>
+
+
+<script>
+    $(function(){
+
+        $(".t_c_f").click(function(){
+            $(".popup").show()
+        })
+
+        $(".popup button").click(function(){
+            $(".popup").hide()
+        })
+
+
+
+
+
+
+
+
+    })
+</script>
+
+
+
 </html>
