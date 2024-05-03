@@ -34,14 +34,10 @@ body {
 }
 
 
-.gnb_wrap {
-    padding: 10px;
-}
-
-
 .gnb {
-    text-align: center;
     position: relative;
+    z-index: 1;
+    padding: 0 10px;
 }
 
 
@@ -52,8 +48,12 @@ body {
     background-color: #ddd;
     position: absolute;
     top: 0;
-    left: 180px;
+    left: 190px;
     display: none;
+}
+
+.gnb.on:after {
+    display: block;
 }
 
 .gnb > li {
@@ -73,6 +73,7 @@ body {
     height: 56px;
     line-height: 56px;
     border: 1px solid #999;
+    text-align: center;
 }
 
 
@@ -82,22 +83,23 @@ body {
     position: absolute;
     top: 6px;
     left: 200px;
-    display: flex;
     gap: 30px;
     width: 600px;
     z-index: 1;
-    display: none;
+    display: block;
 }
 
 .gnb .sub li {
     width: 120px;
     height: 40px;
+    display: inline-block;
 }
 
 .gnb .sub a {
     display: block;
     height: 40px;
     line-height: 40px;
+    text-align: center;
 }
 
 
@@ -148,6 +150,7 @@ body {
     top: 0;
     left: 0;
     width: 100%;
+    /* display: none; */
 }
 
 .slide {
@@ -296,7 +299,7 @@ body {
 
 .note a {
     display: block;
-    width: 80px;
+    width: 800px;
     padding: 4px 0;
     white-space: nowrap;
     overflow: hidden;
@@ -311,6 +314,11 @@ body {
 
 .gallery {
     display: none;
+}
+
+
+.gallery li {
+    display: inline-block;
 }
 
 
@@ -329,7 +337,30 @@ body {
 
 .f_con {
     flex: 1;
+    padding: 0 40px;
 }
+
+.f_menu {
+    margin-bottom: 10px;
+}
+
+
+.f_menu a {
+    display: inline-block;
+    padding: 3px 16px;
+    border-right: 1px solid #999;
+}
+
+
+.f_menu a:hover {
+    text-decoration: underline;
+}
+
+
+.f_menu a:first-child {
+    padding-left: 0;
+}
+
 
 
 .sns {

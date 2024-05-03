@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>영상박물관</title>
+    <link rel="stylesheet" href="./css/main.css">
+    <script src="./js/jquery-1.12.3.js"></script>
+</head>
+
+<body>
+
+    <div class="wrap">
+        <div class="main">
+            <div class="header">
+                <div class="logo">
+                    <a href="#"><img src="./images/logo.png" alt="로고"></a>
+                </div>
+                <ul class="gnb">
+                    <li>
+                        <a href="#">박물관소개</a>
+                        <ul class="sub">
+                            <li><a href="#">인사말</a></li>
+                            <li><a href="#">박물관연혁</a></li>
+                            <li><a href="#">박물관조직도</a></li>
+                            <li><a href="#">오시는길</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">전시</a>
+                        <ul class="sub">
+                            <li><a href="#">전시리스트</a></li>
+                            <li><a href="#">전시일정</a></li>
+                            <li><a href="#">특별전</a></li>
+                            <li><a href="#">지역작가</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">체험행사</a>
+                        <ul class="sub">
+                            <li><a href="#">문화행사</a></li>
+                            <li><a href="#">진로체험</a></li>
+                            <li><a href="#">명사특강</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">커뮤니티</a>
+                        <ul class="sub">
+                            <li><a href="#">사용자메뉴얼</a></li>
+                            <li><a href="#">박물관약도</a></li>
+                            <li><a href="#">게시판</a></li>
+                        </ul>
+                    </li>
+                </ul>                
+                <div class="user">
+                    <a href="#">로그인</a>
+                    <a href="#">회원가입</a>
+                </div>
+            </div>
+
+            <div class="contents">
+                <div class="banner">
+                    <div class="photo">
+                        <img src="./images/slide1.jpg" alt="">
+                    </div>
+                    <div class="texts">
+                         <a href="#">
+                            <h3>Lorem ipsum dolor sit amet elit.</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur ipsam exercitationem minima quisquam dolorum.</p>
+                        </a>
+                    </div>
+                    <div class="arrow"></div>
+                </div>
+                <div class="notice">                    
+                    <h3>공지사항</h3>                 
+                    <ul>
+                        <li>
+                            <a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit.</a>
+                            <span>2020.02.02</span>
+                        </li>
+                         <li>
+                            <a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit.</a>
+                            <span>2020.02.02</span>
+                        </li>
+                        <li>
+                            <a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit.</a>
+                            <span>2020.02.02</span>
+                        </li>
+                        <li>
+                            <a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit.</a>
+                            <span>2020.02.02</span>
+                        </li>
+                    </ul>                    
+                    
+                </div>
+                <div class="gallery">
+                    <h3>갤러리</h3>
+                    <ul>                        
+                        <li>
+                            <a href="#"><img src="./images/link2.jpg" alt=""></a>
+                            <p>Lorem ipsum dolor sit.</p>
+                        </li>
+                        <li>
+                            <a href="#"><img src="./images/link3.jpg" alt=""></a>
+                            <p>Lorem ipsum dolor sit.</p>
+                        </li>                    
+                    </ul>
+                </div>
+            </div>
+
+            <div class="slider">
+            <div class="slides">
+                <div class="slide">
+                    <img src="./images/slide1.jpg" alt="슬라이드1">
+                    <h2>슬라이드1</h2>
+                </div>
+                <div class="slide">
+                    <img src="./images/slide2.jpg" alt="슬라이드2">
+                    <h2>슬라이드2</h2>
+                </div>
+                <div class="slide">
+                    <img src="./images/slide3.jpg" alt="슬라이드3">
+                    <h2>슬라이드3</h2>
+                </div>
+            </div>          
+            </div>
+        </div>
+
+        <div class="footer">
+            <div class="f_logo">
+                <img src="./images/logo.png" alt="하단로고">
+            </div>
+            <div class="f_con">
+                <div class="f_menu">
+                    <a href="">하단메뉴1</a>
+                    <a href="">하단메뉴2</a>
+                    <a href="">하단메뉴3</a>
+                </div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic id quo dolorem!</p>
+            </div>
+            <div class="sns">
+                <a href=""><img src="./images/sns1.jpg" alt=""></a>
+                <a href=""><img src="./images/sns2.jpg" alt=""></a>
+                <a href=""><img src="./images/sns3.jpg" alt=""></a>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+
+
+
+
+        $(".gnb > li").hover(function(){
+            $(this).find("ul").stop().fadeIn()
+        },
+        function(){
+            $(this).find("ul").stop().fadeout()
+        })
+
+
+
+        // setInterval(function(){
+        //     $(".slides").animate({top:"-100%"},function(){
+        //         var firstsilde = $(".slide").eq(0)
+        //         $(this).append(firstsilde)
+        //         $(this).css("top",0)
+        //     })
+        // }, 3000)
+
+
+
+        var slide = $(".slide")
+        var cu = 0
+        // slide.eq(0).show()
+
+        setInterval(function(){
+            var next = ( cu + 1 ) % slide.length
+            slide.eq(cu).fadeOut()
+            slide.eq(next).fadeIn()
+            cu = next
+        } ,2000)
+
+
+
+
+
+
+        // console.log(slide.length)
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+ 
+
+</body>
+</html>

@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>b2연습</title>
+    <link rel="stylesheet" href="./css/text.css">
+    <script src="./js/jquery-1.12.3.js"></script>
+</head>
+
+<body>
+
+    <div class="wrap">
+
+
+        <div class="header">
+            <div class="h_logo">
+                <a href="#"><img src="./B-3_수험자제공파일/Header/logo.png" alt="로고"></a>
+            </div>
+            <ul class="menu">
+                <li>
+                    <a href="#">소장처벌</a>
+                    <ul class="sub">
+                        <li><a href="#">한국</a></li>
+                        <li><a href="#">프랑스</a></li>
+                        <li><a href="#">이탈리아</a></li>
+                        <li><a href="#">독일</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">장르별</a>
+                    <ul class="sub">
+                        <li><a href="#">회화</a></li>
+                        <li><a href="#">판화</a></li>
+                        <li><a href="#">공예/고대유물</a></li>
+                        <li><a href="#">그 외</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">테마별</a>
+                    <ul class="sub">
+                        <li><a href="#">초상화/인물</a></li>
+                        <li><a href="#">종교</a></li>
+                        <li><a href="#">신화/문학</a></li>
+                        <li><a href="#">일상/스포츠</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">시대별</a>
+                    <ul class="sub">
+                        <li><a href="#">1900년이전</a></li>
+                        <li><a href="#">1900년대</a></li>
+                        <li><a href="#">현대</a></li>
+                        <li><a href="#">그 외</a></li>
+                    </ul>
+                </li>
+            </ul>
+
+        </div>
+
+
+        <div class="slide">
+            <div class="s_slides">
+                <div class="s_slide">
+                    <img src="./B-3_수험자제공파일/[Slide]/img1.jpg" alt="슬라이드이미지">
+                    <h2>세계의 미술관1</h2>
+                </div>
+                <div class="s_slide">
+                    <img src="./B-3_수험자제공파일/[Slide]/img2.jpg" alt="슬라이드이미지">
+                    <h2>세계의 미술관2</h2>
+                </div>
+                <div class="s_slide">
+                    <img src="./B-3_수험자제공파일/[Slide]/img3.jpg" alt="슬라이드이미지">
+                    <h2>세계의 미술관3</h2>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="contents">
+            <div class="tab">
+                <div class="t_title">
+                    <h3>공지사항</h3>
+                </div>
+                <ul>
+                    <li id="on"><a href="#">세계의 미술작품 공지사항1</a><span>2020.11.23</span></li>
+                    <li><a href="#">세계의 미술작품 공지사항2</a><span>2020.11.23</span></li>
+                    <li><a href="#">세계의 미술작품 공지사항3</a><span>2020.11.23</span></li>
+                </ul>
+            </div>
+
+            <div class="gallery">
+                <div class="g_title">
+                    <h3>갤러리</h3>
+                </div>
+                <ul>
+                    <li><img src="./B-3_수험자제공파일/Contents/gallery 이미지/icon1.jpg" alt="갤러리이미지"></li>
+                    <li><img src="./B-3_수험자제공파일/Contents/gallery 이미지/icon2.jpg" alt="갤러리이미지"></li>
+                    <li><img src="./B-3_수험자제공파일/Contents/gallery 이미지/icon3.jpg" alt="갤러리이미지"></li>
+                </ul>
+            </div>
+            <div class="banner">
+                <img src="./B-3_수험자제공파일/Contents/배너 이미지/banner.jpg" alt="배너이미지">
+            </div>
+        </div>
+
+
+
+        <div class="footer">
+            <div class="f_logo">
+                <img src="./B-3_수험자제공파일/Header/logo.png" alt="하단로고">
+            </div>
+            <div class="copy">
+                <p>COPYRIGHTⓒ by WEBDESIGN. ALL RIGHTS RESERVED</p>
+            </div>
+            <div class="sns">
+                <a href=".#"><img src="./B-3_수험자제공파일/Footer/sns1.jpg" alt="링크"></a>
+                <a href=".#"><img src="./B-3_수험자제공파일/Footer/sns2.jpg" alt="링크"></a>
+                <a href=".#"><img src="./B-3_수험자제공파일/Footer/sns3.jpg" alt="링크"></a>
+            </div>
+        </div>
+
+
+
+        <div class="modal">
+            <div class="m_title">
+                <h3>세계의 미술작품 공지사항</h3>
+            </div>
+            <div class="m_con">
+                <p>동해물과 백두산이 마르고 닳도록 하느님이 보우하사 우리나라만세.
+                    무궁화 삼천리 화려강 대한 사람 대한으로 길이 보전하세.
+                    남산 위에 저 소나무, 철갑을 두른 듯 바람서리 불변함은 우리 기상일세.</p>
+            </div>
+            <button id="close">닫기</button>
+        </div>
+
+        
+    </div>
+
+
+    <script>
+        $(function(){
+
+            //팝업
+            $("#on").click(function(){
+                $(".modal").show()
+            })
+
+            $("#close").click(function(){
+                $(".modal").hide()
+            })
+
+            setInterval(function(){
+                $(".s_slides").animate({top : "-100%"},function(){
+                    $(this).append($(".s_slide").eq(0))
+                    $(this).css("top",0)
+                })
+            }, 3000)
+
+
+         
+        
+
+
+
+
+
+
+
+
+        })
+    </script>
+    
+</body>
+</html>

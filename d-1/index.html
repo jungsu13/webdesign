@@ -16,41 +16,39 @@
                 <div class="logo">
                     <a href="#"><img src="./images/logo.png" alt="로고"></a>
                 </div>
-                <div class="gnb_wrap">
-                    <ul class="gnb">
-                        <li>
-                            <a href="#">CLUB</a>
-                            <ul class="sub">
-                                <li><a href="#">클럽소개</a></li>
-                                <li><a href="#">시설안내</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="#">BOOKING</a>
-                            <ul class="sub">
-                                <li><a href="#">요금안내</a></li>
-                                <li><a href="#">예약안내</a></li>
-                                <li><a href="#">위약안내</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="#">INFORMATION</a>
-                            <ul class="sub">
-                                <li><a href="#">명예의 전당</a></li>
-                                <li><a href="#">이벤트</a></li>
-                                <li><a href="#">자료실</a></li>
-                                <li><a href="#">포토캘러리</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="#">COMMUNITY</a>
-                            <ul class="sub">
-                                <li><a href="#">공지사항</a></li>
-                                <li><a href="#">Q&A</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
+                <ul class="gnb">
+                    <li>
+                        <a href="#">CLUB</a>
+                        <ul class="sub">
+                            <li><a href="#">클럽소개</a></li>
+                            <li><a href="#">시설안내</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">BOOKING</a>
+                        <ul class="sub">
+                            <li><a href="#">요금안내</a></li>
+                            <li><a href="#">예약안내</a></li>
+                            <li><a href="#">위약안내</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">INFORMATION</a>
+                        <ul class="sub">
+                            <li><a href="#">명예의 전당</a></li>
+                            <li><a href="#">이벤트</a></li>
+                            <li><a href="#">자료실</a></li>
+                            <li><a href="#">포토캘러리</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">COMMUNITY</a>
+                        <ul class="sub">
+                            <li><a href="#">공지사항</a></li>
+                            <li><a href="#">Q&A</a></li>
+                        </ul>
+                    </li>
+                </ul>                
                 <div class="user">
                     <a href="#">로그인</a>
                     <a href="#">회원가입</a>
@@ -130,8 +128,15 @@
                         </ul>
                         <ul class="gallery">
                             <li>
-                                <a href="./images/link1.jpg"></a>
+                                <a href="#"><img src="./images/link2.jpg" alt=""></a>
                             </li>
+                            <li>
+                                <a href="#"><img src="./images/link2.jpg" alt=""></a>
+                            </li>
+                            <li>
+                                <a href="#"><img src="./images/link3.jpg" alt=""></a>
+                            </li>
+                            
                         </ul>
 
                     </div>
@@ -158,11 +163,53 @@
             </div>
         </div>
 
-
-
-
-
     </div>
+
+    <script>
+
+            //gnb
+            $(".gnb").hover(
+                function(){                    
+                    $(this).addClass("on")
+                    $(".sub").shop().fadeIn()
+                },
+                function(){
+                    $(this).removeClass("on")
+                    $(".sub").stop().fadeOut()
+                }
+            )
+
+            // //slide
+            // setInterval(function(){
+            //     $(".slides").animate({top:"-100%"}, function(){
+            //         $(this).append($(".slide").eq(0))
+            //         $(this).css("top", 0)
+            //     })
+            // }, 3000)
+
+
+            //tab
+            $(".t_title h3").click(function(){
+                var idx = $(this).index()
+                $(".t_title h3").removeClass("active")
+                $(this).addClass("active")
+
+                $(".t_con ul").hide()
+                $(".t_con ul").eq(idx).show()
+            })
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
     
 </body>
 </html>
